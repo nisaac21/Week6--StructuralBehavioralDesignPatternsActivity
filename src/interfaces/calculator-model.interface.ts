@@ -14,4 +14,17 @@ export interface ICalculatorModel {
   // returns the contents of the calculator's display
   display(): string;
 
+  attach(observer : ICalculatorObserver): void;
+
+  detach(observer : ICalculatorObserver) : void;
+
+  notify(message : string) : void;
+
+}
+
+
+export interface ICalculatorObserver {
+
+  update(message : string) : void 
+
 }
